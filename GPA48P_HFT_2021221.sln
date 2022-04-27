@@ -28,7 +28,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Others", "Others", "{8953DC
 		.gitignore = .gitignore
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPA48P_HFT_2021221.WPFClient", "GPA48P_HFT_2021221.WPFClient\GPA48P_HFT_2021221.WPFClient.csproj", "{1A158486-F246-497E-9C1F-C3093D6269E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GPA48P_HFT_2021221.WPFClient", "GPA48P_HFT_2021221.WPFClient\GPA48P_HFT_2021221.WPFClient.csproj", "{1A158486-F246-497E-9C1F-C3093D6269E6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

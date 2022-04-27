@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using GPA48P_HFT_2021221.Models;
@@ -117,9 +116,9 @@ namespace GPA48P_HFT_2021221.WPFClient
         {
             if(!IsInDesignMode)
             {
-                AnimalShelters = new RestCollection<AnimalShelter>("http://localhost:62480/animalShelter", "animalShelter", "hub");
-                Owners = new RestCollection<Owner>("http://localhost:62480/owner", "owner", "hub");
-                Pets = new RestCollection<Pet>("http://localhost:62480/pet", "pet", "hub");
+                AnimalShelters = new RestCollection<AnimalShelter>("http://localhost:62480/", "animalShelter", "hub");
+                Owners = new RestCollection<Owner>("http://localhost:62480/", "owner", "hub");
+                Pets = new RestCollection<Pet>("http://localhost:62480/", "pet", "hub");
 
                 //-------------------------------
                 // Animal Shelter Relay Commands
@@ -129,11 +128,11 @@ namespace GPA48P_HFT_2021221.WPFClient
                 {
                     AnimalShelters.Add(new AnimalShelter()
                     {
-                        SheltertName = SelectedAnimalShelter.SheltertName
-                        //ShelterId = SelectedAnimalShelter.ShelterId,
-                        //Address = SelectedAnimalShelter.Address,
-                        //PhoneNumber = SelectedAnimalShelter.PhoneNumber,
-                        //TaxNumber = SelectedAnimalShelter.TaxNumber
+                        ShelterId = SelectedAnimalShelter.ShelterId,
+                        SheltertName = SelectedAnimalShelter.SheltertName,
+                        Address = SelectedAnimalShelter.Address,
+                        PhoneNumber = SelectedAnimalShelter.PhoneNumber,
+                        TaxNumber = SelectedAnimalShelter.TaxNumber
                     });
                 });
 
@@ -161,12 +160,12 @@ namespace GPA48P_HFT_2021221.WPFClient
                 {
                     Owners.Add(new Owner()
                     {
-                        FirstName = SelectedOwner.FirstName
-                        //OwnerId = SelectedOwner.OwnerId,
-                        //LastName = SelectedOwner.LastName,
-                        //Address = SelectedOwner.Address,
-                        //PhoneNumber= SelectedOwner.PhoneNumber,
-                        //Age = SelectedOwner.Age
+                        OwnerId = SelectedOwner.OwnerId,
+                        FirstName = SelectedOwner.FirstName,
+                        LastName = SelectedOwner.LastName,
+                        Address = SelectedOwner.Address,
+                        PhoneNumber = SelectedOwner.PhoneNumber,
+                        Age = SelectedOwner.Age
                     });
                 });
 
@@ -194,13 +193,13 @@ namespace GPA48P_HFT_2021221.WPFClient
                 {
                     Pets.Add(new Pet()
                     {
-                        Type = SelectedPet.Type
-                        //PetId = SelectedPet.PetId,
-                        //Class = SelectedPet.Class,
-                        //Age = SelectedPet.Age,
-                        //AdoptionYear = SelectedPet.AdoptionYear,
-                        //ShelterId = SelectedPet.ShelterId,
-                        //OwnerId = SelectedPet.OwnerId
+                        PetId = SelectedPet.PetId,
+                        Class = SelectedPet.Class,
+                        Type = SelectedPet.Type,
+                        Age = SelectedPet.Age,
+                        AdoptionYear = SelectedPet.AdoptionYear,
+                        ShelterId = SelectedPet.ShelterId,
+                        OwnerId = SelectedPet.OwnerId
                     });
                 });
 
