@@ -11,4 +11,8 @@
     <ProjectReference Include="..\GPA48P_HFT_2021221.Repository\GPA48P_HFT_2021221.Repository.csproj" />
   </ItemGroup>
 
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.1.0" />
+	</ItemGroup>
+
 </Project>
