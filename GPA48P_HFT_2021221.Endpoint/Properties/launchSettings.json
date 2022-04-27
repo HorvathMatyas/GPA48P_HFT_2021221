@@ -10,7 +10,7 @@
   "profiles": {
     "IIS Express": {
       "commandName": "IISExpress",
-      "launchUrl": "animalshelter",
+      "launchUrl": "animalShelter",
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
@@ -18,7 +18,7 @@
     },
     "GPA48P_HFT_2021221.Endpoint": {
       "commandName": "Project",
-      "launchUrl": "animalshelter",
+      "launchUrl": "animalShelter",
       "dotnetRunMessages": "true",
       "launchBrowser": true,
       "applicationUrl": "http://localhost:5000",
