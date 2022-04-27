@@ -5,29 +5,78 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GPA48P_HFT_2021221.WPFClient"
         mc:Ignorable="d"
-        Title="Animal Shelter Editor" Height="450" Width="800">
+        Title="Animal Shelter Editor" Height="426" Width="457">
+    
     <Window.DataContext>
         <local:MainWindowViewModel/>
     </Window.DataContext>
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
-        </Grid.ColumnDefinitions>
-        <ListBox ItemsSource="{Binding AnimalShelters}" SelectedItem="{Binding SelectedAnimalShelter}">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <Label Content="{Binding SheltertName}" />
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
-        <StackPanel Grid.Column="1">
-            <Label Content="Name" Background="LightBlue" Padding="10" />
-            <TextBox Text="{Binding SelectedAnimalShelter.SheltertName}" Padding="10" Margin="0,0,0,30" />
-            <Button Content="Create Actor" Command="{Binding CreateAnimalShelterCommand}" Margin="10" Padding="10" />
-            <Button Content="Delete Actor" Command="{Binding DeleteAnimalShelterCommand}" Margin="10" Padding="10" />
-            <Button Content="Update Actor" Command="{Binding UpdateAnimalShelterCommand}" Margin="10" Padding="10" />
-            <Label Content="{Binding ErrorMessage}" FontSize="18" Foreground="Red" HorizontalContentAlignment="Center" />
-        </StackPanel>
-    </Grid>
+
+    <TabControl>
+        <TabItem>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <ListBox Grid.Column="0" ItemsSource="{Binding AnimalShelters}" SelectedItem="{Binding SelectedAnimalShelter}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Label Content="{Binding SheltertName}"/>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                <StackPanel Grid.Column="1">
+                    <Label Content="Animal Shelter Name" Background="LightBlue" Padding="10"/>
+                    <TextBox Text="{Binding SelectedAnimalShelter.SheltertName}" Padding="10"/>
+                    <Button Content="Create Animal Shelter" Command="{Binding CreateAnimalShelterCommand}" Padding="10"/>
+                    <Button Content="Update Animal Shelter" Command="{Binding UpdateAnimalShelterCommand}" Padding="10"/>
+                    <Button Content="Delete Animal Shelter" Command="{Binding DeleteAnimalShelterCommand}" Padding="10"/>
+                </StackPanel>
+            </Grid>
+        </TabItem>
+        <TabItem>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <ListBox Grid.Column="0" ItemsSource="{Binding Owners}" SelectedItem="{Binding SelectedOwner}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Label Content="{Binding FirstName}"/>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                <StackPanel Grid.Column="1">
+                    <Label Content="Owner First Name" Background="LightBlue" Padding="10"/>
+                    <TextBox Text="{Binding SelectedOwner.FirstName}" Padding="10"/>
+                    <Button Content="Create Owner" Command="{Binding CreateOwnerCommand}" Padding="10"/>
+                    <Button Content="Update Owner" Command="{Binding UpdateOwnerCommand}" Padding="10"/>
+                    <Button Content="Delete Owner" Command="{Binding DeleteOwnerCommand}" Padding="10"/>
+                </StackPanel>
+            </Grid>
+        </TabItem>
+        <TabItem>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <ListBox Grid.Column="0" ItemsSource="{Binding Pets}" SelectedItem="{Binding SelectedPet}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Label Content="{Binding Type}"/>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                <StackPanel Grid.Column="1">
+                    <Label Content="Pet Type" Background="LightBlue" Padding="10"/>
+                    <TextBox Text="{Binding SelectedPet.Type}" Padding="10"/>
+                    <Button Content="Create Pet" Command="{Binding CreatePetCommand}" Padding="10"/>
+                    <Button Content="Update Pet" Command="{Binding UpdatePetCommand}" Padding="10"/>
+                    <Button Content="Delete Pet" Command="{Binding DeletePetCommand}" Padding="10"/>
+                </StackPanel>
+            </Grid>
+        </TabItem>
+    </TabControl>
 </Window>
