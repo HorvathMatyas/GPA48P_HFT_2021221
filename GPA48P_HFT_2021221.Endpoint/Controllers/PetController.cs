@@ -2,6 +2,8 @@
 using GPA48P_HFT_2021221.Logic;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.SignalR;
+using GPA48P_HFT_2021221.Endpoint.Services;
 
 namespace GPA48P_HFT_2021221.Endpoint.Controllers
 {
@@ -11,9 +13,12 @@ namespace GPA48P_HFT_2021221.Endpoint.Controllers
     {
         IPetLogic pl;
 
-        public PetController(IPetLogic pl)
+        IHubContext<SignalRHub> hub;
+
+        public PetController(IPetLogic pl, IHubContext<SignalRHub> hub)
         {
             this.pl = pl;
+            this.hub = hub;
         }
 
         // GET: /pet
@@ -35,6 +40,7 @@ namespace GPA48P_HFT_2021221.Endpoint.Controllers
         public void Post([FromBody] Pet value)
         {
             pl.Create(value);
+            this.hub.Clients.All.SendAsync("PetCreated", value);
         }
 
         // PUT /pet
@@ -42,13 +48,16 @@ namespace GPA48P_HFT_2021221.Endpoint.Controllers
         public void Put([FromBody] Pet value)
         {
             pl.Update(value);
+            this.hub.Clients.All.SendAsync("PetUpdated", value);
         }
 
         // DELETE /pet/petid
         [HttpDelete("{petid}")]
         public void Delete(int petId)
         {
+            var petToDelete = this.pl.Read(petId);
             pl.Delete(petId);
+            this.hub.Clients.All.SendAsync("PetDeleted", petToDelete);
         }
     }
 }

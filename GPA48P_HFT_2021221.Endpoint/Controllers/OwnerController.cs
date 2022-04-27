@@ -2,6 +2,8 @@
 using GPA48P_HFT_2021221.Logic;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.SignalR;
+using GPA48P_HFT_2021221.Endpoint.Services;
 
 namespace GPA48P_HFT_2021221.Endpoint.Controllers
 {
@@ -11,9 +13,12 @@ namespace GPA48P_HFT_2021221.Endpoint.Controllers
     {
         IOwnerLogic ol;
 
-        public OwnerController(IOwnerLogic ol)
+        IHubContext<SignalRHub> hub;
+
+        public OwnerController(IOwnerLogic ol, IHubContext<SignalRHub> hub)
         {
             this.ol = ol;
+            this.hub = hub;
         }
 
         // GET: /owner
@@ -35,6 +40,7 @@ namespace GPA48P_HFT_2021221.Endpoint.Controllers
         public void Post([FromBody] Owner value)
         {
             ol.Create(value);
+            this.hub.Clients.All.SendAsync("OwnerCreated", value);
         }
 
         // PUT /owner
@@ -42,13 +48,16 @@ namespace GPA48P_HFT_2021221.Endpoint.Controllers
         public void Put([FromBody] Owner value)
         {
             ol.Update(value);
+            this.hub.Clients.All.SendAsync("OwnerUpdated", value);
         }
 
         // DELETE /owner/ownerid
         [HttpDelete("{ownerid}")]
         public void Delete(int ownerId)
         {
+            var ownerToDelete = this.ol.Read(ownerId);
             ol.Delete(ownerId);
+            this.hub.Clients.All.SendAsync("OwnerDeleted", ownerToDelete);
         }
     }
 }
