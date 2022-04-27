@@ -129,11 +129,11 @@ namespace GPA48P_HFT_2021221.WPFClient
                 {
                     AnimalShelters.Add(new AnimalShelter()
                     {
-                        ShelterId = SelectedAnimalShelter.ShelterId,
-                        SheltertName = SelectedAnimalShelter.SheltertName,
-                        Address = SelectedAnimalShelter.Address,
-                        PhoneNumber = SelectedAnimalShelter.PhoneNumber,
-                        TaxNumber = SelectedAnimalShelter.TaxNumber
+                        SheltertName = SelectedAnimalShelter.SheltertName
+                        //ShelterId = SelectedAnimalShelter.ShelterId,
+                        //Address = SelectedAnimalShelter.Address,
+                        //PhoneNumber = SelectedAnimalShelter.PhoneNumber,
+                        //TaxNumber = SelectedAnimalShelter.TaxNumber
                     });
                 });
 
@@ -151,6 +151,8 @@ namespace GPA48P_HFT_2021221.WPFClient
                     return SelectedAnimalShelter != null;
                 });
 
+                SelectedAnimalShelter = new AnimalShelter();
+
                 //----------------------
                 // Owner Relay Commands
                 //----------------------
@@ -159,12 +161,12 @@ namespace GPA48P_HFT_2021221.WPFClient
                 {
                     Owners.Add(new Owner()
                     {
-                        OwnerId = SelectedOwner.OwnerId,
-                        FirstName = SelectedOwner.FirstName,
-                        LastName = SelectedOwner.LastName,
-                        Address = SelectedOwner.Address,
-                        PhoneNumber= SelectedOwner.PhoneNumber,
-                        Age = SelectedOwner.Age
+                        FirstName = SelectedOwner.FirstName
+                        //OwnerId = SelectedOwner.OwnerId,
+                        //LastName = SelectedOwner.LastName,
+                        //Address = SelectedOwner.Address,
+                        //PhoneNumber= SelectedOwner.PhoneNumber,
+                        //Age = SelectedOwner.Age
                     });
                 });
 
@@ -182,6 +184,8 @@ namespace GPA48P_HFT_2021221.WPFClient
                     return SelectedOwner != null;
                 });
 
+                SelectedOwner = new Owner();
+
                 //--------------------
                 // Pet Relay Commands
                 //--------------------
@@ -190,13 +194,13 @@ namespace GPA48P_HFT_2021221.WPFClient
                 {
                     Pets.Add(new Pet()
                     {
-                        PetId = SelectedPet.PetId,
-                        Class = SelectedPet.Class,
-                        Type = SelectedPet.Type,
-                        Age = SelectedPet.Age,
-                        AdoptionYear = SelectedPet.AdoptionYear,
-                        ShelterId = SelectedPet.ShelterId,
-                        OwnerId = SelectedPet.OwnerId
+                        Type = SelectedPet.Type
+                        //PetId = SelectedPet.PetId,
+                        //Class = SelectedPet.Class,
+                        //Age = SelectedPet.Age,
+                        //AdoptionYear = SelectedPet.AdoptionYear,
+                        //ShelterId = SelectedPet.ShelterId,
+                        //OwnerId = SelectedPet.OwnerId
                     });
                 });
 
@@ -213,6 +217,8 @@ namespace GPA48P_HFT_2021221.WPFClient
                 {
                     return SelectedPet != null;
                 });
+
+                SelectedPet = new Pet();
             }
         }
     }
