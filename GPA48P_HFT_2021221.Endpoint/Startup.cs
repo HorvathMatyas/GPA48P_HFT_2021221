@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using GPA48P_HFT_2021221.Endpoint.Services;
 
 namespace GPA48P_HFT_2021221.Endpoint
 {
@@ -23,6 +24,8 @@ namespace GPA48P_HFT_2021221.Endpoint
             services.AddTransient<IPetRepository, PetRepository>();
 
             services.AddTransient<AnimalShelterDbContext, AnimalShelterDbContext>();
+
+            services.AddSignalR();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -37,6 +40,7 @@ namespace GPA48P_HFT_2021221.Endpoint
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHub<SignalRHub>("/hub");
             });
         }
     }
