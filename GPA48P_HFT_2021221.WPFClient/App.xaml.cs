@@ -13,5 +13,6 @@ namespace GPA48P_HFT_2021221.WPFClient
     /// </summary>
     public partial class App : Application
     {
+
     }
 }
