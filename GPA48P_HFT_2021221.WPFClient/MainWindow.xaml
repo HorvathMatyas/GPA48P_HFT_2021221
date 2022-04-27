@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GPA48P_HFT_2021221.WPFClient"
         mc:Ignorable="d"
-        Title="Animal Shelter Editor" Height="426" Width="457">
+        Title="Animal Shelter Editor" Height="618" Width="463">
     
     <Window.DataContext>
         <local:MainWindowViewModel/>
@@ -28,6 +28,12 @@
                 <StackPanel Grid.Column="1">
                     <Label Content="Animal Shelter Name" Background="LightBlue" Padding="10"/>
                     <TextBox Text="{Binding SelectedAnimalShelter.SheltertName}" Padding="10"/>
+                    <Label Content="Animal Shelter Address" Background="LightBlue" Padding="10"/>
+                    <TextBox Text="{Binding SelectedAnimalShelter.Address}" Padding="10"/>
+                    <Label Content="Animal Shelter Phone Number" Background="LightBlue" Padding="10"/>
+                    <TextBox Text="{Binding SelectedAnimalShelter.PhoneNumber}" Padding="10"/>
+                    <Label Content="Animal Shelter Tax Number" Background="LightBlue" Padding="10"/>
+                    <TextBox Text="{Binding SelectedAnimalShelter.TaxNumber}" Padding="10"/>
                     <Button Content="Create Animal Shelter" Command="{Binding CreateAnimalShelterCommand}" Padding="10"/>
                     <Button Content="Update Animal Shelter" Command="{Binding UpdateAnimalShelterCommand}" Padding="10"/>
                     <Button Content="Delete Animal Shelter" Command="{Binding DeleteAnimalShelterCommand}" Padding="10"/>
@@ -50,6 +56,14 @@
                 <StackPanel Grid.Column="1">
                     <Label Content="Owner First Name" Background="LightBlue" Padding="10"/>
                     <TextBox Text="{Binding SelectedOwner.FirstName}" Padding="10"/>
+                    <Label Content="Owner Last Name" Background="LightBlue" Padding="10"/>
+                    <TextBox Text="{Binding SelectedOwner.LastName}" Padding="10"/>
+                    <Label Content="Owner Address" Background="LightBlue" Padding="10"/>
+                    <TextBox Text="{Binding SelectedOwner.Address}" Padding="10"/>
+                    <Label Content="Owner Phone Number" Background="LightBlue" Padding="10"/>
+                    <TextBox Text="{Binding SelectedOwner.PhoneNumber}" Padding="10"/>
+                    <Label Content="Owner Age" Background="LightBlue" Padding="10"/>
+                    <TextBox Text="{Binding SelectedOwner.Age}" Padding="10"/>
                     <Button Content="Create Owner" Command="{Binding CreateOwnerCommand}" Padding="10"/>
                     <Button Content="Update Owner" Command="{Binding UpdateOwnerCommand}" Padding="10"/>
                     <Button Content="Delete Owner" Command="{Binding DeleteOwnerCommand}" Padding="10"/>
@@ -70,8 +84,18 @@
                     </ListBox.ItemTemplate>
                 </ListBox>
                 <StackPanel Grid.Column="1">
+                    <Label Content="Pet Class" Background="LightBlue" Padding="10"/>
+                    <TextBox Text="{Binding SelectedPet.Class}" Padding="10"/>
                     <Label Content="Pet Type" Background="LightBlue" Padding="10"/>
                     <TextBox Text="{Binding SelectedPet.Type}" Padding="10"/>
+                    <Label Content="Pet Age" Background="LightBlue" Padding="10"/>
+                    <TextBox Text="{Binding SelectedPet.Age}" Padding="10"/>
+                    <Label Content="Pet Adoption Year" Background="LightBlue" Padding="10"/>
+                    <TextBox Text="{Binding SelectedPet.AdoptionYear}" Padding="10"/>
+                    <Label Content="Pet Shelter ID" Background="LightBlue" Padding="10"/>
+                    <TextBox Text="{Binding SelectedPet.ShelterId}" Padding="10"/>
+                    <Label Content="Pet Owner ID" Background="LightBlue" Padding="10"/>
+                    <TextBox Text="{Binding SelectedPet.OwnerId}" Padding="10"/>
                     <Button Content="Create Pet" Command="{Binding CreatePetCommand}" Padding="10"/>
                     <Button Content="Update Pet" Command="{Binding UpdatePetCommand}" Padding="10"/>
                     <Button Content="Delete Pet" Command="{Binding DeletePetCommand}" Padding="10"/>
