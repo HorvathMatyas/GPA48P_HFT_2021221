@@ -59,7 +59,7 @@ function display() {
             + t.address + "</td><td>"
             + t.phoneNumber + "</td><td>"
             + t.taxNumber + "</td><td>"
-            + `<button type="button" onclick="showupdate(${t.shelterId})">Update</button>` +
+            + `<button type="button" onclick="showupdate(${t.shelterId})">Update</button>`
             + `<button type="button" onclick="remove(${t.shelterId})">Delete</button>` +
             "</td></tr>";
     });
@@ -91,6 +91,9 @@ function create() {
 
 function showupdate(id) {
     document.getElementById('shelterNameToUpdate').value = shelter.find(t => t['shelterId'] == id)['shelterName'];
+    document.getElementById('addressToUpdate').value = shelter.find(t => t['shelterId'] == id)['address'];
+    document.getElementById('phoneNumberToUpdate').value = shelter.find(t => t['shelterId'] == id)['phoneNumber'];
+    document.getElementById('taxNumberToUpdate').value = shelter.find(t => t['shelterId'] == id)['taxNumber'];
     document.getElementById('updateformdiv').style.display = 'flex';
     shelterIdToUpdate = id;
 }
