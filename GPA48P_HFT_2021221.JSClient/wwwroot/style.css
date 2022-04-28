@@ -1,0 +1,19 @@
+﻿table {
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 5px;
+}
+
+th {
+    background-color: lightblue;
+}
