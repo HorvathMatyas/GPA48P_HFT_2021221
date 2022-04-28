@@ -27,7 +27,7 @@
                 </ListBox>
                 <StackPanel Grid.Column="1">
                     <Label Content="Animal Shelter Name" Background="LightBlue" Padding="10"/>
-                    <TextBox Text="{Binding SelectedAnimalShelter.SheltertName}" Padding="10"/>
+                    <TextBox Text="{Binding SelectedAnimalShelter.ShelterName}" Padding="10"/>
                     <Label Content="Animal Shelter Address" Background="LightBlue" Padding="10"/>
                     <TextBox Text="{Binding SelectedAnimalShelter.Address}" Padding="10"/>
                     <Label Content="Animal Shelter Phone Number" Background="LightBlue" Padding="10"/>
