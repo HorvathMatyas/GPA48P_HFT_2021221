@@ -99,6 +99,7 @@ function showupdate(id) {
 }
 
 function update() {
+    document.getElementById('updateformdiv').style.display = 'none';
     let name = document.getElementById('shelterNameToUpdate').value;
     let name2 = document.getElementById('addressToUpdate').value;
     let name3 = document.getElementById('phoneNumberToUpdate').value;
