@@ -24,12 +24,27 @@ th {
     margin-bottom: 20px;
 }
 
-#formdiv label, button, input {
+    #formdiv label, button, input {
+        margin: 10px;
+        padding: 7px;
+    }
+
+    #formdiv label {
+        font-weight: bolder;
+    }
+
+#updateformdiv {
+    display: none;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+#updateformdiv label, button, input {
     margin: 10px;
     padding: 7px;
 }
 
-#formdiv label {
+#updateformdiv label {
     font-weight: bolder;
 }
 
