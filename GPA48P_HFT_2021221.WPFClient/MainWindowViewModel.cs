@@ -30,12 +30,12 @@ namespace GPA48P_HFT_2021221.WPFClient
                 {
                     selectedAnimalShelter = new AnimalShelter()
                     {
-                        ShelterId = value.ShelterId,
                         ShelterName = value.ShelterName,
                         Address = value.Address,
                         PhoneNumber = value.PhoneNumber,
-                        TaxNumber = value.TaxNumber
-                };
+                        TaxNumber = value.TaxNumber,
+                        ShelterId = value.ShelterId
+                    };
                     OnPropertyChanged();
                     ((RelayCommand)DeleteAnimalShelterCommand).NotifyCanExecuteChanged();
                 }
@@ -51,12 +51,12 @@ namespace GPA48P_HFT_2021221.WPFClient
                 {
                     selectedOwner = new Owner()
                     {
-                        OwnerId = value.OwnerId,
                         FirstName = value.FirstName,
                         LastName = value.LastName,
                         Address = value.Address,
                         PhoneNumber = value.PhoneNumber,
-                        Age = value.Age
+                        Age = value.Age,
+                        OwnerId = value.OwnerId
                     };
                     OnPropertyChanged();
                     ((RelayCommand)DeleteOwnerCommand).NotifyCanExecuteChanged();
@@ -73,13 +73,13 @@ namespace GPA48P_HFT_2021221.WPFClient
                 {
                     selectedPet = new Pet()
                     {
-                        PetId = value.PetId,
                         Class = value.Class,
                         Type = value.Type,
                         Age = value.Age,
                         AdoptionYear = value.AdoptionYear,
                         ShelterId = value.ShelterId,
-                        OwnerId = value.OwnerId
+                        OwnerId = value.OwnerId,
+                        PetId = value.PetId
                     };
                     OnPropertyChanged();
                     ((RelayCommand)DeletePetCommand).NotifyCanExecuteChanged();
@@ -128,7 +128,6 @@ namespace GPA48P_HFT_2021221.WPFClient
                 {
                     AnimalShelters.Add(new AnimalShelter()
                     {
-                        ShelterId = SelectedAnimalShelter.ShelterId,
                         ShelterName = SelectedAnimalShelter.ShelterName,
                         Address = SelectedAnimalShelter.Address,
                         PhoneNumber = SelectedAnimalShelter.PhoneNumber,
@@ -160,7 +159,6 @@ namespace GPA48P_HFT_2021221.WPFClient
                 {
                     Owners.Add(new Owner()
                     {
-                        OwnerId = SelectedOwner.OwnerId,
                         FirstName = SelectedOwner.FirstName,
                         LastName = SelectedOwner.LastName,
                         Address = SelectedOwner.Address,
@@ -193,7 +191,6 @@ namespace GPA48P_HFT_2021221.WPFClient
                 {
                     Pets.Add(new Pet()
                     {
-                        PetId = SelectedPet.PetId,
                         Class = SelectedPet.Class,
                         Type = SelectedPet.Type,
                         Age = SelectedPet.Age,

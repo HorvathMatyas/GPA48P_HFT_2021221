@@ -21,7 +21,7 @@
                 <ListBox Grid.Column="0" ItemsSource="{Binding AnimalShelters}" SelectedItem="{Binding SelectedAnimalShelter}">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
-                            <Label Content="{Binding SheltertName}"/>
+                            <Label Content="{Binding ShelterName}"/>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
