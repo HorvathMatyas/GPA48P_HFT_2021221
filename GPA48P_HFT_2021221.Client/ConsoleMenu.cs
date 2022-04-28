@@ -113,7 +113,7 @@ namespace GPA48P_HFT_2021221.Client
 
             rest.Post(new AnimalShelter
             {
-                SheltertName = shelterName,
+                ShelterName = shelterName,
                 Address = address,
                 PhoneNumber = phoneNumber,
                 TaxNumber = taxNumber
@@ -207,7 +207,7 @@ namespace GPA48P_HFT_2021221.Client
             AnimalShelter animalShelter = rest.Get<AnimalShelter>(shelterId, "animalshelter");
 
             Console.WriteLine();
-            Console.WriteLine("Name: " + animalShelter.SheltertName);
+            Console.WriteLine("Name: " + animalShelter.ShelterName);
             Console.WriteLine("Address: " + animalShelter.Address);
             Console.WriteLine("Phone number: " + animalShelter.PhoneNumber);
             Console.WriteLine("Tax number: " + animalShelter.TaxNumber);
@@ -289,7 +289,7 @@ namespace GPA48P_HFT_2021221.Client
             rest.Put(new AnimalShelter
             {
                 ShelterId = shelterId,
-                SheltertName = shelterName,
+                ShelterName = shelterName,
                 Address = address,
                 PhoneNumber = phoneNumber,
                 TaxNumber = taxNumber

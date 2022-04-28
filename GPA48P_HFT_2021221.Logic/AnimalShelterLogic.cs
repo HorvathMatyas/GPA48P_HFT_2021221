@@ -17,11 +17,11 @@ namespace GPA48P_HFT_2021221.Logic
 
         public void Create(AnimalShelter animalShelter)
         {
-            if (animalShelter.SheltertName is null || animalShelter.SheltertName == "")
+            if (animalShelter.ShelterName is null || animalShelter.ShelterName == "")
             {
                 throw new Exception("A menhely neve nem lehet üres!");
             }
-            else if (animalShelter.SheltertName.Length < 5)
+            else if (animalShelter.ShelterName.Length < 5)
             {
                 throw new Exception("A menhely neve legalább 5 karakter hosszúságú legyen!");
             }
@@ -77,7 +77,7 @@ namespace GPA48P_HFT_2021221.Logic
                                                 .Select(x =>
                                                     new AvarageAgeOfDogsAtAllShelters
                                                     {
-                                                        ShelterName = x.SheltertName,
+                                                        ShelterName = x.ShelterName,
                                                         AvarageAge = x.Pets.Where(y => y.Class
                                                             .Equals("Kutya")).Count()==0 ?0:   // ha 0, akkor nincs kutya, egyébként tovább
                                                         x.Pets.Where(y => y.Class

@@ -94,7 +94,7 @@ namespace GPA48P_HFT_2021221.Test
                 new AnimalShelter()
                 {
                     ShelterId = 1,
-                    SheltertName = "Menhely1",
+                    ShelterName = "Menhely1",
                     Address = "New York",
                     PhoneNumber = "06709871234",
                     TaxNumber = "18942873562",
@@ -103,7 +103,7 @@ namespace GPA48P_HFT_2021221.Test
                 new AnimalShelter()
                 {
                     ShelterId = 2,
-                    SheltertName = "Menhely2",
+                    ShelterName = "Menhely2",
                     Address = "Tokió",
                     PhoneNumber = "06209128456",
                     TaxNumber = "19371496731",
@@ -112,7 +112,7 @@ namespace GPA48P_HFT_2021221.Test
                 new AnimalShelter()
                 {
                     ShelterId = 3,
-                    SheltertName = "Menhely3",
+                    ShelterName = "Menhely3",
                     Address = "Peking",
                     PhoneNumber = "06306541298",
                     TaxNumber = "19285239871",
@@ -370,7 +370,7 @@ namespace GPA48P_HFT_2021221.Test
             // ASSERT
             Assert.Throws<Exception>(() => animalShelterLogic.Create(new AnimalShelter
             {
-                SheltertName = "Menhely",
+                ShelterName = "Menhely",
                 Address = "Budapest Fehér utca 12",
                 PhoneNumber = "06308769321",
                 TaxNumber = ""

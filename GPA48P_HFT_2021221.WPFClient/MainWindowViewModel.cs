@@ -31,7 +31,7 @@ namespace GPA48P_HFT_2021221.WPFClient
                     selectedAnimalShelter = new AnimalShelter()
                     {
                         ShelterId = value.ShelterId,
-                        SheltertName = value.SheltertName,
+                        ShelterName = value.ShelterName,
                         Address = value.Address,
                         PhoneNumber = value.PhoneNumber,
                         TaxNumber = value.TaxNumber
@@ -129,7 +129,7 @@ namespace GPA48P_HFT_2021221.WPFClient
                     AnimalShelters.Add(new AnimalShelter()
                     {
                         ShelterId = SelectedAnimalShelter.ShelterId,
-                        SheltertName = SelectedAnimalShelter.SheltertName,
+                        ShelterName = SelectedAnimalShelter.ShelterName,
                         Address = SelectedAnimalShelter.Address,
                         PhoneNumber = SelectedAnimalShelter.PhoneNumber,
                         TaxNumber = SelectedAnimalShelter.TaxNumber

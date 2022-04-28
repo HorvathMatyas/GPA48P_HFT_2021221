@@ -12,7 +12,7 @@ namespace GPA48P_HFT_2021221.Models
         public int ShelterId { get; set; }
 
         [Required]
-        public string SheltertName { get; set; }
+        public string ShelterName { get; set; }
 
         [Required]
         public string Address { get; set; }

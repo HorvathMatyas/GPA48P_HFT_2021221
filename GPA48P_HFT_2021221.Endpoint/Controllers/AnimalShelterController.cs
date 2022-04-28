@@ -21,21 +21,21 @@ namespace GPA48P_HFT_2021221.Endpoint.Controllers
             this.hub = hub;
         }
 
-        // GET: /animalshelter
+        // GET: /animalShelter
         [HttpGet]
         public IEnumerable<AnimalShelter> Get()
         {
             return asl.GetAll();
         }
 
-        // GET /animalshelter/shelterid
+        // GET /animalShelter/shelterid
         [HttpGet("{shelterid}")]
         public AnimalShelter Get(int shelterId)
         {
             return asl.Read(shelterId);
         }
 
-        // POST /animalshelter
+        // POST /animalShelter
         [HttpPost]
         public void Post([FromBody] AnimalShelter value)
         {
@@ -43,7 +43,7 @@ namespace GPA48P_HFT_2021221.Endpoint.Controllers
             this.hub.Clients.All.SendAsync("AnimalShelterCreated", value);
         }
 
-        // PUT /animalshelter
+        // PUT /animalShelter
         [HttpPut]
         public void Put([FromBody] AnimalShelter value)
         {
@@ -51,7 +51,7 @@ namespace GPA48P_HFT_2021221.Endpoint.Controllers
             this.hub.Clients.All.SendAsync("AnimalShelterUpdated", value);
         }
 
-        // DELETE /animalshelter/shelterid
+        // DELETE /animalShelter/shelterid
         [HttpDelete("{shelterid}")]
         public void Delete(int shelterId)
         {

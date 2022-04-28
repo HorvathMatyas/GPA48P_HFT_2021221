@@ -39,7 +39,7 @@ namespace GPA48P_HFT_2021221.Repository
         public void Update(AnimalShelter animalShelter)
         {
             var oldAnimalShelter = Read(animalShelter.ShelterId);
-            oldAnimalShelter.SheltertName = animalShelter.SheltertName;
+            oldAnimalShelter.ShelterName = animalShelter.ShelterName;
             oldAnimalShelter.Address = animalShelter.Address;
             oldAnimalShelter.PhoneNumber = animalShelter.PhoneNumber;
             oldAnimalShelter.TaxNumber = animalShelter.TaxNumber;

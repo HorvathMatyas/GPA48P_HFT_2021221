@@ -101,7 +101,7 @@ namespace GPA48P_HFT_2021221.Data
             AnimalShelter shelter1 = new AnimalShelter()
             {
                 ShelterId = 1,
-                SheltertName = "Menhely Alapítvány",
+                ShelterName = "Menhely Alapítvány",
                 Address = "Budapest, Vajdahunyad u. 3, 1082",
                 PhoneNumber = "06202349876",
                 TaxNumber = "19013213142"
@@ -110,7 +110,7 @@ namespace GPA48P_HFT_2021221.Data
             AnimalShelter shelter2 = new AnimalShelter()
             {
                 ShelterId = 2,
-                SheltertName = "Állatmentő Sereg",
+                ShelterName = "Állatmentő Sereg",
                 Address = "Budapest, Nagymező u. 8, 1065",
                 PhoneNumber = "06304564321",
                 TaxNumber = "18334461142"
@@ -119,7 +119,7 @@ namespace GPA48P_HFT_2021221.Data
             AnimalShelter shelter3 = new AnimalShelter()
             {
                 ShelterId = 3,
-                SheltertName = "Cicamentő angyalok",
+                ShelterName = "Cicamentő angyalok",
                 Address = "Budapest, Lipót u. 12, 1074",
                 PhoneNumber = "06709871234",
                 TaxNumber = "17816385193"
